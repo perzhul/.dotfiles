@@ -1,14 +1,16 @@
 live_config_reload = true
+shell = "/opt/homebrew/bin/fish"
 
 [window]
-opacity = 0.85
+opacity = 0.95
 padding = { x = 18, y = 16 }
 dynamic_padding = false
 decorations = "Buttonless"
 
 [font]
 normal = { family = "JetBrains Mono", style = "Regular" }
-size = 22
+size = 18
 
 [scrolling]
 history = 10000
+
