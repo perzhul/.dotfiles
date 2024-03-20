@@ -1,6 +1,11 @@
 alias vim=nvim
-alias ls="lsd -a"
 alias work="vim ~/work/geopie/"
+
+alias ls="lsd"
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 function last_history_item
     echo $history[1]
