@@ -1,2 +1,4 @@
 fish/completions
 fish/fish_variables
+tmux/plugins/tmp
+.DS_Store
