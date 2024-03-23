@@ -1,5 +1,9 @@
+set -g -x work ~/work/
+set -g -x dotfiles ~/.dotfiles
+
 alias vim=nvim
 alias work="vim ~/work/geopie/"
+alias todo="vim ~/personal/todo.md"
 
 alias ls="lsd"
 alias l='ls -l'
@@ -12,4 +16,4 @@ function last_history_item
 end
 
 abbr -a !! --position anywhere --function last_history_item
-set -g -x work ~/work
+
