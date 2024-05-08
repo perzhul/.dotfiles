@@ -4,7 +4,6 @@ live_config_reload = true
 shell = "/opt/homebrew/bin/fish"
 
 [window]
-opacity = 1
 padding = { x = 18, y = 16 }
 dynamic_padding = false
 decorations = "Buttonless"
