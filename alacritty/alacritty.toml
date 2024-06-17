@@ -1,0 +1,14 @@
+live_config_reload = true
+shell = "/opt/homebrew/bin/fish"
+
+[window]
+dynamic_padding = false
+decorations = "Buttonless"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 13
+
+[scrolling]
+history = 10000
+

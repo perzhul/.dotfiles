@@ -1,17 +1,1 @@
-# import = ["~/.config/alacritty/rose-pine-dawn.toml"]
-
-live_config_reload = true
-shell = "/opt/homebrew/bin/fish"
-
-[window]
-padding = { x = 18, y = 16 }
-dynamic_padding = false
-decorations = "Buttonless"
-
-[font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 15
-
-[scrolling]
-history = 10000
 
