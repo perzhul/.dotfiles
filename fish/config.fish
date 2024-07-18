@@ -19,6 +19,8 @@ alias todo="vim ~/personal/todo.md"
 alias fishc="vim ~/.dotfiles/fish/config.fish"
 alias vimc="vim ~/.dotfiles/nvim/init.lua"
 
+alias gpa="ls | xargs -P10 -I{} git -C {} pull"
+
 # Set the default editor to Neovim
 set -x EDITOR nvim
 
