@@ -169,7 +169,16 @@ alias zi=__zoxide_zi
 
 # =============================================================================
 #
-# To initialize zoxide, add this to your configuration (usually
-# ~/.config/fish/config.fish):
-#
+# pnpm
+set -gx PNPM_HOME "/Users/danil/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
 zoxide init fish | source
+mcfly init fish | source
