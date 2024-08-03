@@ -14,11 +14,10 @@ set -g theme_hostname always
 
 
 alias vim=nvim
-alias work="vim ~/work/geopie/"
-alias todo="vim ~/personal/todo.md"
 alias fishc="vim ~/.dotfiles/fish/config.fish"
 alias vimc="vim ~/.dotfiles/nvim/init.lua"
 
+alias unpull="git reset --keep HEAD@{1}"
 alias gpa="ls | xargs -P10 -I{} git -C {} pull"
 
 # Set the default editor to Neovim
