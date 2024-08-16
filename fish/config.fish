@@ -12,6 +12,9 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
+alias g=git
+alias gi=gitui
+alias wt="git worktree"
 
 alias vim=nvim
 alias fishc="vim ~/.dotfiles/fish/config.fish"
@@ -41,17 +44,6 @@ alias dcs="docker compose stop"
 alias dcp="docker compose pull"
 alias ds="docker ps"
 
-alias g="git"
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias gl="git log"
-alias gd="git diff"
-alias gb="git branch"
-alias gco="git checkout"
-alias gcb="git checkout -b"
-alias gpl="git pull"
 
 function last_history_item
     echo $history[1]
