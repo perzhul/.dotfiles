@@ -12,3 +12,5 @@ size = 14
 [scrolling]
 history = 10000
 
+[ env ]
+TERM = "xterm-256color"
