@@ -1,5 +1,5 @@
-fish/completions
-fish/fish_variables
 tmux/plugins/tmp
 .DS_Store
+fish/completions
 fish/fish_variables
+fish/functions
