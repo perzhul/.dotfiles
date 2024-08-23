@@ -14,6 +14,8 @@ set -g theme_hostname always
 
 alias g=git
 alias gi=gitui
+alias gs="git stash"
+alias gsp="git stash pop"
 alias wt="git worktree"
 
 alias vim=nvim
