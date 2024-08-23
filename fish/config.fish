@@ -18,6 +18,8 @@ alias gs="git stash"
 alias gsp="git stash pop"
 alias wt="git worktree"
 
+alias ta="tmux attach"
+
 alias vim=nvim
 alias fishc="vim ~/.dotfiles/fish/config.fish"
 alias vimc="vim ~/.dotfiles/nvim/init.lua"
@@ -173,5 +175,10 @@ end
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+# Vi keybindings
+fish_vi_key_bindings
+
 zoxide init fish | source
 mcfly init fish | source
+starship init fish | source
+starship preset nerd-font-symbols -o ~/.config/starship.toml
