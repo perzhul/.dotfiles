@@ -1,45 +1,47 @@
 set fish_greeting ""
 
-set -g -x work ~/work/
-set -g -x dotfiles ~/.dotfiles
-
 set -gx TERM xterm-256color
 
-# theme
+# Theme
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
+# Git
 alias g=git
 alias gi=gitui
 alias gs="git stash"
 alias gsp="git stash pop"
 alias wt="git worktree"
 
+# Tmux
 alias ta="tmux attach"
 
+# General
 alias vim=nvim
 alias fishc="vim ~/.dotfiles/fish/config.fish"
 alias vimc="vim ~/.dotfiles/nvim/init.lua"
 
-alias unpull="git reset --keep HEAD@{1}"
 alias gpa="ls | xargs -P10 -I{} git -C {} pull"
 
 # Set the default editor to Neovim
 set -x EDITOR nvim
 
+# Path
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH /usr/local/bin $PATH
+set -gx PATH /usr/local/bin:$PATH
 
-alias ls="lsd --group-dirs first"
-alias l='ls -l'
-alias la='ls -A'
-alias lla='ls -lA'
+# Lsd
+alias ls="lsd -lA --group-dirs first"
+alias l='lsd --group-dirs first'
 alias lt='ls --tree'
 
+# Docker
 alias dcd="docker compose down"
 alias dcu="docker compose up"
 alias dcb="docker compose build"
@@ -47,7 +49,6 @@ alias dcr="docker compose restart"
 alias dcs="docker compose stop"
 alias dcp="docker compose pull"
 alias ds="docker ps"
-
 
 function last_history_item
     echo $history[1]
