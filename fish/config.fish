@@ -2,7 +2,7 @@ set fish_greeting ""
 
 set -gx TERM xterm-256color
 
-alias cd=z
+source ~/.config/fish/aliases.fish
 
 # Theme
 set -g theme_color_scheme terminal-dark
@@ -11,15 +11,18 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
+# Git prompt status
+set -g __fish_git_prompt_showdirtystate 'yes'
+set -g __fish_git_prompt_showupstream auto
+set -g pure_git_untracked_dirty false
+
 # Git
 alias g=git
 alias gi=gitui
 alias gs="git stash"
 alias gsp="git stash pop"
 alias wt="git worktree"
-
-# Tmux
-alias ta="tmux attach"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
 # General
 alias vim=nvim
