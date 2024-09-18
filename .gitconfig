@@ -5,9 +5,6 @@
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [alias]
 	gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
-[alias]
 	cob = ! "git checkout -b"
-[alias]
 	graph = ! "git log --oneline --decorate --graph --all"
-[alias]
 	unpull = ! "git reset --keep HEAD@{1}"
