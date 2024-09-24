@@ -24,15 +24,24 @@ alias gsp="git stash pop"
 alias wt="git worktree"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
+# Utils
+alias ports_used="lsof -i -P -n | grep LISTEN"
+alias ld=lazydocker
+alias lg=lazygit
+
 # General
 alias vim=nvim
 alias fishc="vim ~/.dotfiles/fish/config.fish"
 alias vimc="vim ~/.dotfiles/nvim/init.lua"
+alias dots="cd ~/.dotfiles"
 
 alias gpa="ls | xargs -P10 -I{} git -C {} pull"
 
 # Set the default editor to Neovim
 set -x EDITOR nvim
+
+# Yazi File Manager
+alias f=yazi
 
 # Path
 set -gx PATH bin $PATH
@@ -42,9 +51,13 @@ set -gx PATH /usr/local/bin $PATH
 set -gx PATH /usr/local/bin:$PATH
 
 # Lsd
-alias ls="lsd -lA --group-dirs first"
-alias l='lsd --group-dirs first'
-alias lt='ls --tree'
+
+# alias ls="lsd -lA --group-dirs first"
+# alias l='lsd --group-dirs first'
+# alias lt='ls --tree'
+
+# Eza
+alias ls="eza -l -F"
 
 # Docker
 alias dcd="docker compose down"
@@ -185,6 +198,8 @@ set --export PATH $BUN_INSTALL/bin $PATH
 fish_vi_key_bindings
 
 zoxide init fish | source
+alias cd="z"
+
 mcfly init fish | source
 starship init fish | source
 starship preset nerd-font-symbols -o ~/.config/starship.toml
